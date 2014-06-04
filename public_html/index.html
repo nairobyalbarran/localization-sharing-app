@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Nuevo Proyecto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="js/jquery.mobile-1.4.0.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script> 
+        <style type="text/css">
+        </style>
+    </head>
+    <body id="body">
+        <!-- Comienzo de la primera pagina-->
+        <div data-role="page" id="one">
+            <div   class="titulo" data-role="header">
+                <h1>Primera página</h1>
+            </div><!-- /header1 -->
+            <div   id="contenedor" role="main" class="ui-content">
+                <div id="botones" class="ui-field-contain"> 
+                    <p><strong>Localization Sharing</strong></p>
+                </div>
+            </div><!-- /content -->
+        </div><!-- /page -->
+
+        <!-- Comienzo de la segunda página -->
+        <div data-role="page" id="two">
+            <div class="titulo" data-role="header">
+                <h1>Segunda página</h1>
+                <a href="#one" class="ui-btn ui-corner-all ui-btn-left">Pag.1</a>
+                <a href="#three" class="ui-btn ui-corner-all ui-btn-right">Pag.3</a>
+                <!--                <a href="#one" class="ui-nodisc-icon ui-btn ui-btn-a ui-shadow-icon ui-corner-all ui-btn-icon-left ui-icon-myicon">Pag.1</a>
+                                <a href="#three" id="jugar" class="ui-nodisc-icon ui-btn ui-btn-a ui-shadow-icon ui-corner-all ui-btn-icon-left ui-icon-myicon">Pag.3</a>-->
+
+            </div><!-- /header1 -->
+
+            <div role="main" class="ui-content">
+                <div id="tituloElemento" class="ui-field-contain"> 
+
+                </div> 
+            </div>
+            <!-- /content -->
+        </div>
+        <!-- /page -->
+
+        <!-- Comienzo de la tercera pagina-->
+        <div data-role="page" id="three">
+            <div data-role="header">
+                <h1>Tercera página</h1>
+                <a href="#two" class="ui-btn ui-corner-all ui-btn-left">Pag.2</a>
+
+
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+
+            </div><!-- /content -->
+        </div><!-- /page -->
+
+
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(function() {
+                    setTimeout(hideSplash, 3000);
+                });
+                function hideSplash() {
+                    $.mobile.changePage("#two", "fade");
+                }
+            });
+
+
+
+        </script>
+    </body>
+</html>
