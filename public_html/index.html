@@ -19,44 +19,52 @@
     <body id="body">
         <!-- Comienzo de la primera pagina-->
         <div data-role="page" id="one">
-            <div   class="titulo" data-role="header">
-                <h1>Primera página</h1>
+            <div class="titulo" data-role="header">
+                <h1>LocMap</h1>
             </div><!-- /header1 -->
             <div   id="contenedor" role="main" class="ui-content">
-                <div id="botones" class="ui-field-contain"> 
-                    <p><strong>Localization Sharing</strong></p>
+               
+                    <div id="imagen" class="ui-field-contain"> 
+                    <img  src="img/localization.png"   alt="fondo"/>
                 </div>
+             
             </div><!-- /content -->
         </div><!-- /page -->
 
         <!-- Comienzo de la segunda página -->
-        <div data-role="page" id="two">
-            <div class="titulo" data-role="header">
-                <h1>Segunda página</h1>
-                <a href="#three" id="tres" class="ui-btn ui-corner-all ui-btn-right">Pag.3</a>
+        <div data-role="page" id="two" class="ui-page ui-page-theme-a">
+            <div class="titulo" id="titulo" data-role="header">
+                <h1>LocMap</h1>
+                <a href="#three" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-left ui-btn-icon-notext ui-btn-right">derecha</a>
+
             </div><!-- /header1 -->
 
-            <div role="main" id="map" class="ui-content">
+            <div role="main" class="ui-content">
+                <div id="map">
+                </div>
             </div>
+
             <!-- /content -->
         </div>
         <!-- /page -->
 
         <!-- Comienzo de la tercera pagina-->
         <div data-role="page" id="three">
-            <div data-role="header">
-                <h1>Tercera página</h1>
-                <a href="#two" class="ui-btn ui-corner-all ui-btn-left">Pag.2</a>
+            <div class="titulo" data-role="header">
+                <h1>LocMap</h1>
+                <a href="#two" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left ui-btn-icon-notext">derecha</a>
+                <!--                <a href="#two" class="ui-btn ui-corner-all ui-btn-left">Pag.2</a>-->
             </div><!-- /header -->
-            <div role="main" class="ui-content">
+
+            <div role="main" class="ui-content" id="creditos">
                 <p>Autor: Nairobi Albarran Castro</p>
                 <p>Tecnologías usadas:</p>
                 <ul>
-                    <li>HTML5.</li>
-                    <li>CCS3.</li>
-                    <li>JavaScript.</li>
-                    <li>jQuery Mobile.</li>
-                    <li>Google Maps API.</li>
+                    <li>HTML5</li>
+                    <li>CCS3</li>
+                    <li>JavaScript</li>
+                    <li>jQuery Mobile</li>
+                    <li>Google Maps API</li>
                 </ul>
             </div><!-- /content -->
         </div><!-- /page -->

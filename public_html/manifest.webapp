@@ -1,0 +1,25 @@
+{
+	"version": "0.1",
+	"name": "LocMap",
+	"description": "Mapa",
+	"launch_path": "index.html",
+	
+        "icons": {
+		"60":  "/img/ico60.png",
+                "90":  "/img/ico90.png",
+                "128":  "/img/ico128.png"
+	},
+
+	"developer": {
+		"name": "Nairoby Albarran Castro"
+		
+	},
+	"permissions": {
+	    "geolocation": {
+	      "description": "Utilizado para centrar el mapa en la posición actual"
+      	},
+      	"storage": {
+			"description": "Guardar location."
+		}
+  	}
+}

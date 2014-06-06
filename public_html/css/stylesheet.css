@@ -1,43 +1,45 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : 04-jun-2014, 22:11:46
     Author     : NAIROBYALBARRAN
 */
 
-/*#map{
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: absolute;  posición absoluta a navegador 
-    top: 50px;       50px debajo de borde de navegador 
-    left: 0;         ajusta a borde de navegador 
-    right: 0;
-    bottom: 0;
-    background: rgba(0,255,0,0.5);  verde si no hay mapa 
-}*/
+.titulo{
+    font-size: 20px;
+}
+@font-face{
+    font-family: 'FiraSans';
+    src: url('FiraSansOT-Light.otf');
+}
+#creditos, ul, li {
+    text-align: center;
+}
 
 
-#map .ui-content {
+#creditos{
+    font-size: 20px;
+}
+img{
+    max-width: 100%;
+    margin:0 auto 0 auto;
+    display:block; 
+
+}
+#map  {
     display: block;
-    margin: 0;
-    padding: 0;
-    position: absolute; /* posición absoluta a navegador */
-    top: 50px;      /* 50px debajo de borde de navegador */
-    left: 0;        /* ajusta a borde de navegador */
-    right: 0;
-    bottom: 0;
-    background: rgba(0,255,0,0.5); /* verde si no hay mapa */
-    width: 100%;
-    height: 100%;
-    /*    position : absolute;
+    margin:0;
+   padding-bottom: 0;
+    position : absolute;
     top      : 40px;
     right    : 0;
-    bottom   : 39px;
-    left     : 0;*/
-    
-    }
+    bottom   : 0;
+    left     : 0;
+    width: auto !important;
+    height: auto !important;
+    background: rgba(0,255,0,0.5);  //verde si no hay mapa 
+
+}
+
+#titulo{
+    height: 40px;
+}
 
