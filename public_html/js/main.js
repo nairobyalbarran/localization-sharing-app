@@ -2,10 +2,10 @@
  */
 
 $(document).ready(function() {
-    function hideSplash() {
-        $.mobile.changePage("#two", "fade");
-        }
-    setTimeout(hideSplash, 9000);
+//    function hideSplash() {
+//        $.mobile.changePage("#two", "fade");
+//        }
+//    setTimeout(hideSplash, 9000);
     
     
     var map, lat = 40.4167754, lng = -3.7037901999999576; //inializo variables 

@@ -2,7 +2,7 @@
 	"version": "0.1",
 	"name": "LocMap",
 	"description": "Mapa",
-	"launch_path": "index.html",
+	"launch_path": "/index.html",
 	
         "icons": {
 		"60":  "/img/ico60.png",
