@@ -1,45 +1,52 @@
 /* 
  */
 
+/* 
+ */
+
 $(document).ready(function() {
 //    function hideSplash() {
 //        $.mobile.changePage("#two", "fade");
 //        }
-//    setTimeout(hideSplash, 9000);
-    
-    
-    var map, lat = 40.4167754, lng = -3.7037901999999576; //inializo variables 
-    function geolocalizar() {
+//    setTimeout(hideSplash, 2000);
 
-                 GMaps.geolocate({
-                    success: function(position) {
-                        lat = position.coords.latitude;  // guarda coords en lat y lng
-                        lng = position.coords.longitude;
 
-                        // Mueve el mapa hacia la posición indicada                 
-                        map.setCenter(lat, lng);
+    // var map = L.map('map');
 
-                        // añade marcador en la posicion indicada[lat, lng]
-                        map.addMarker({
-                            lat: lat,
-                            lng: lng
-                        });
-               
 
-                    },
-                    error: function(error) {
-                        alert('Geolocalización falla: ' + error.message);
-                    },
-                    not_supported: function() {
-                        alert("Su navegador no soporta geolocalización");
-                    }
-                });
-            }
-             map = new GMaps({// muestra mapa centrado en coords [lat, lng]
-                    el: '#map',
-                    lat: lat,
-                    lng: lng
-             });
-            geolocalizar();
-            
+//    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+//        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+//    }).addTo(map);
+
+    var map = new L.Map('map', {center: new L.LatLng(51.51, -0.11), zoom: 9});
+    var googleLayer = new L.Google('ROADMAP');
+    map.addLayer(googleLayer);
+
+
+    map.locate({setView: true, maxZoom: 16});
+
+    function onLocationFound(e) {
+        var radius = e.accuracy / 2;
+
+//       
+//        var marker = new L.Marker(new L.LatLng(51.51, -0.11));
+//        marker.bindPopup('Hello, world!');
+//        map.addLayer(marker);
+
+
+        L.marker(e.latlng).addTo(map)
+                .bindPopup("Estás a " + radius + " metros de este punto").openPopup();
+
+        L.circle(e.latlng, radius).addTo(map);
+    }
+
+    map.on('locationfound', onLocationFound);
+
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    map.on('locationerror', onLocationError);
+
+
 });
