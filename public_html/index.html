@@ -6,45 +6,39 @@
         <title>Localization Sharing app</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="js/jquery.mobile-1.4.0.min.css" />
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-        <link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
-        <link rel="stylesheet" href="css/leaflet.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link type="text/css" rel="stylesheet" href="js/jquery.mobile-1.4.0.min.css" />
+        <link type="text/css" rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
+        <link type="text/css" rel="stylesheet" href="css/leaflet.css" />
         <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
         <style type="text/css">
         </style>
     </head>
     <body id="body">
-        <!--         Comienzo de la primera pagina
-                <div data-role="page" id="one">
-                    <div   class="titulo" data-role="header">
-                        <h1>Primera página</h1>
+        <!--                 Comienzo de la primera pagina-->
+        <!--        <div data-role="page" id="one" data-theme="b">
+                    <div class="titulo" data-role="header">
+                        <h1>LocMap</h1>
                     </div> /header1 
                     <div   id="contenedor" role="main" class="ui-content">
-                        <div id="botones" class="ui-field-contain"> 
-                            <p><strong>Localization Sharing</strong></p>
+        
+                        <div id="imagen" class="ui-field-contain"> 
+                            <img  src="img/localization.png"   alt="fondo"/>
                         </div>
-                    </div> /content 
-                </div> /page -->
+                    </div>  /content 
+                </div>  /page -->
 
         <!-- Comienzo de la segunda página -->
         <div data-role="page" id="two" data-theme="b">
             <div class="titulo" id="titulo" data-role="header">
                 <h1>LocMap</h1>
-                <a href="#three" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-left ui-btn-icon-notext ui-btn-right">derecha</a>
+                <a href="#three" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-info ui-btn-icon-notext ui-btn-right">derecha</a>
 
             </div><!-- /header1 -->
 
-            <div role="main" id="map" class="ui-content">
-                <script>
-var map = new L.Map('map', {center: new L.LatLng(51.51, -0.11), zoom: 9});
-    var googleLayer = new L.Google('ROADMAP');
-    map.addLayer(googleLayer);
-
-
-    map.locate({setView: true, maxZoom: 16});
-                </script>
+            <div role="main"   class="ui-content">
+                <div id="map">
+                </div>
             </div>
             <!-- /content -->
         </div>
@@ -55,26 +49,49 @@ var map = new L.Map('map', {center: new L.LatLng(51.51, -0.11), zoom: 9});
         <div data-role="page" id="three" data-theme="b">
             <div data-role="header" class="titulo">
                 <h1>LocMap</h1>
-                <a href="#two" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left ui-btn-icon-notext">derecha</a>
+                <a href="#two" class=" ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">derecha</a>
             </div><!-- /header -->
-            <div role="main" class="ui-content" id="creditos">
-                <p>Autor: Nairobi Albarran Castro</p>
-                <p>Tecnologías usadas:</p>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CCS3</li>
-                    <li>JavaScript</li>
-                    <li>jQuery Mobile</li>
-                    <li>Google Maps API</li>
+
+            <div role="main" class="ui-content" id="creditos">         
+<!--                <p id="autor">Autor: Nairobi Albarran</p>-->
+                <p id="descripcion">Tecnologías usadas:</p>
+
+                <ul data-role="listview">
+                    <li class="ui-li-has-thumb">
+                        <img src="img/HTML5_Logo_512.png" class="imagen">
+                        <p class="tecnologia">HTML5</p>
+                    </li>
+                    <li class="ui-li-has-thumb" >
+                        <img src="img/logo_CSS3.png" class="imagen">
+                        <p class="tecnologia">CC3</p>
+                    </li>
+                    <li class="ui-li-has-thumb">
+                        <img src="img/javascript_logo.png" class="imagen" id="js">
+                        <p class="tecnologia">JavaScript</p>
+                    </li>
+                    <li class="ui-li-has-thumb">
+                        <img src="img/jquery_logo.png" class="imagen2" id="jquery">
+                        <p class="tecnologia">jQuery Mobile</p>
+                    </li>
+                    <li class="ui-li-has-thumb">
+                        <img src="img/leaflet.png" class="imagen">
+                        <p class="tecnologia">Leaflet</p>
+                    </li>
+                    <li class="ui-li-has-thumb">
+                        <img src="img/google_maps_logo.png" class="imagen" id="google">
+                        <p class="tecnologia">Google Maps API</p>
+                    </li>
                 </ul>
-            </div><!-- /content -->
+
+            </div>
         </div><!-- /page -->
-        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+        <script type="text/javascript" src="js/leaflet.js"></script>
         <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
-        <script src="http://matchingnotes.com/javascripts/leaflet-google.js"></script>
+        <script type="text/javascript"  src="http://matchingnotes.com/javascripts/leaflet-google.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script> 
         <script type="text/javascript" src="js/main.js"></script>
         
+
     </body>
 </html>
