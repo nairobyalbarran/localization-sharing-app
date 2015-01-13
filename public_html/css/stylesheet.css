@@ -34,6 +34,17 @@ html, body{
     font-size: 20px;
 
 }
+
+.ui-btn-left{
+    top: 0.7em;
+}
+.ui-btn-icon-notext.ui-btn-right{
+    top:0.6em;
+}
+.ui-btn-icon-notext.ui-btn-left{
+    top:0.6em;
+}
+
 @font-face {
     font-family: "Bitstream Vera Serif Bold";
     src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
@@ -172,5 +183,33 @@ img{
 }
 
 
+.ui-icon-myicon:after {
+    background-image: url("img/facebook-icon.png");
+    /* Make your icon fit */
+    background-size: 20px 20px;
+}
+
+.ui-icon-myicon2:after {
+    background-image: url("img/mobile-phone-8.png");
+    /* Make your icon fit */
+    background-size: 24px 24px;
+}
 
 
+#contenedor{
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    margin:  0px;
+    padding: 0.7em 1em;
+    display: block;
+    position: relative;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    -moz-user-select: none;
+    height: 20px;
+
+}
